@@ -1,0 +1,8 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata: {name: platform}
+spec:
+  sourceRepos: ["https://github.com/example/kubernetes-gitops-platform.git"]
+  destinations:
+    - namespace: platform-demo
+      server: https://kubernetes.default.svc
